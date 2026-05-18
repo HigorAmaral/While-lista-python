@@ -4,7 +4,9 @@ while True:
     if ponto == 'E': e += 1
     elif ponto == 'D': d += 1
     
-    if (e >= 21 or d >= 21) and abs(e - d) >= 2:
+    if (e == 21 and d <= 19) or (d == 21 and e <= 19):
+        break
+    if (e > 21 or d > 21) and abs(e - d) == 2:
         break
 
 print("E" if e > d else "D")
